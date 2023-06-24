@@ -1,0 +1,6 @@
+:host::ng-deep.p-dialog .p-dialog-footer {
+ text-align: center;
+}
+.delete-popup-confirm {
+  background-color: white !important;
+}

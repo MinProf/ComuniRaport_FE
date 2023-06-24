@@ -1,0 +1,43 @@
+
+:host::ng-deep.p-datatable .p-datatable-header {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  text-align: center;
+}
+:host::ng-deep.edit-btn,
+:host::ng-deep.delete-btn {
+  width: 3rem;
+  border-radius: 5px;
+  border-color: transparent;
+  margin-right: 0.3rem;
+  background-color: transparent;
+}
+:host::ng-deep.edit-btn {
+  color: var(--border-color-grass-green);
+}
+:host::ng-deep.delete-btn {
+  color: red;
+}
+:host::ng-deep.delete-btn:hover {
+  background-color: red;
+}
+:host::ng-deep.edit-btn:hover {
+  background-color: var(--border-color-grass-green);
+}
+:host::ng-deep.p-button-label:hover,
+:host::ng-deep.p-button-label:enabled:focus {
+  color: var(--text-color-white);
+}
+.table-wrapper {
+  width: 100%;
+  max-height: 100%;
+  position: relative;
+  margin-bottom: 5rem;
+}
+::ng-deep.p-datatable .p-datatable-thead > tr > th {
+  text-align: center;
+}
+:host::ng-deep.p-datatable .p-paginator-bottom {
+  border-bottom-right-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+}

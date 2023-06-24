@@ -1,0 +1,25 @@
+img {
+  width: 16vw;
+  height: 12vw;
+}
+
+.w-8 {
+  margin-left: 20rem;
+}
+
+.grid {
+  background-color: var(--primary-bg-color-green)
+}
+.hide{
+  cursor: default;
+  color: white;
+  background-color: white;
+  border: none;
+}
+:host::ng-deep.pi-shopping-cart:before {
+  display: none;
+}
+h3 {
+  text-decoration: underline;
+  font-family: "Isidora Sans",serif;
+}

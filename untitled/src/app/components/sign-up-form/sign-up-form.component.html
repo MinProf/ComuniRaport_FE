@@ -1,0 +1,86 @@
+<div class="desktop-container flex card align-items-center justify-content-center">
+  <div class="surface-card p-4 shadow-2 border-round w-full lg:w-5 mt-6">
+    <h3 class="flex justify-content-center">Înregistrați-vă pe platforma ComuniRaport!</h3>
+<form [formGroup]="signUpForm" (ngSubmit)="onFormSubmit()" class="p-fluid">
+  <div class="flex align-content-center justify-content-between mt-5">
+    <div>
+      <span class="p-float-label">
+    <input id="lastName" pInputText type="text" [formControlName]="'lastName'" class="p-inputtext custom-input" >
+    <label [htmlFor]="'lastName'" for="lastName" >Nume:</label>
+      </span>
+    <div *ngIf="isFormControlInvalid('lastName')" class="p-error mt-1">
+      <div *ngIf="isFormControlError('lastName', 'required')">Numele este obligatoriu.</div>
+    </div>
+    </div>
+  <div>
+    <span class="p-float-label">
+    <input id="firstName" pInputText type="text" formControlName="firstName" class="p-inputtext custom-input">
+    <label for="firstName" [htmlFor]="'firstName'">Prenume:</label>
+      </span>
+    <div *ngIf="isFormControlInvalid('firstName')" class="p-error mt-1">
+      <div *ngIf="isFormControlError('firstName', 'required')">Prenumele este obligatoriu.</div>
+    </div>
+  </div>
+  </div>
+  <div class="flex align-content-center justify-content-between mt-3">
+    <div>
+      <span class="p-float-label mt-2">
+      <input pInputText type="email" id="email" formControlName="email" class="p-inputtext custom-input">
+      <label [htmlFor]="'email'">Email:</label>
+        </span>
+      <div *ngIf="isFormControlInvalid('email')" class="p-error mt-2">
+        <div *ngIf="isFormControlError('email', 'required')">Adresa de email este obligatorie.</div>
+        <div *ngIf="isFormControlError('email', 'email')">Format invalid</div>
+      </div>
+    </div>
+    <div>
+      <span class="p-float-label mt-2">
+      <input id="phone" [maxlength]="10" pInputText type="text" formControlName="phone" class="p-inputtext custom-input">
+      <label [htmlFor]="'phone'">Număr de telefon:</label>
+        </span>
+      <div *ngIf="isFormControlInvalid('phone')" class="p-error mt-1">
+        <div *ngIf="isFormControlError('phone', 'required')">Numărul de telefon este obligatoriu. </div>
+        <div *ngIf="isFormControlError('phone', 'minlength')">Numărul de telefon trebuie să conțină 10 cifre.</div>
+        <div *ngIf="isFormControlError('phone', 'pattern')"></div>
+      </div>
+    </div>
+  </div>
+  <div class="flex align-content-center justify-content-between mt-3">
+    <div>
+      <span class="p-float-label mt-2">
+      <input id="county" pInputText type="text" formControlName="county" class="p-inputtext custom-input">
+      <label [htmlFor]="'county'" >Județ:</label>
+        </span>
+    </div>
+    <div>
+      <span class="p-float-label mt-2">
+      <input id="city" pInputText type="text" formControlName="city" class="p-inputtext custom-input">
+      <label [htmlFor]="'city'">Oraș:</label>
+        </span>
+    </div>
+  </div>
+  <div class="mt-3">
+    <label for="password" class=" custom-label-color">Parolă:</label>
+    <input [type]="showPassword ? 'text' : 'password'" id="password" formControlName="password" class="p-inputtext">
+      <button class="password-icon passw-eye-btn" (click)="togglePasswordVisibility()"><i class="pi" [ngClass]="{'pi-eye': showPassword, 'pi-eye-slash': !showPassword}"></i></button>
+    <div *ngIf="isFormControlInvalid('password')" class="p-error mt-2">
+      <div *ngIf="isFormControlError('password', 'required')">Parola este obligatorie.</div>
+      <div *ngIf="isFormControlError('password', 'minlength')">Parola trebuie să conțină cel puțin 8 caractere.</div>
+      <div *ngIf="isPasswordPatternError()">Parola trebuie să conțină cel puțin o literă majusculă și o cifră.</div>
+    </div>
+    <div class="-mb-1">
+    <label for="confirmPassword" class="custom-label-color">Confirmă Parola:</label></div>
+    <input [type]="showPassword ? 'text' : 'password'" id="confirmPassword" formControlName="confirmPassword" class="p-inputtext mt-1">
+      <button class="password-icon passw-eye-btn" (click)="togglePasswordVisibility()"><i class="pi" [ngClass]="{'pi-eye': showPassword, 'pi-eye-slash': !showPassword}"></i></button>
+    <div *ngIf="isFormControlInvalid('confirmPassword')" class="p-error">
+      <div *ngIf="isFormControlError('confirmPassword', 'required')">Confirmarea parolei este obligatorie.</div>
+      <div *ngIf="isPasswordMatchError()">Parolele trebuie să coincidă.</div>
+    </div>
+    </div>
+  <div class="flex align-items-center justify-content-center">
+    <p-button class="p-button-icon flex align-content-center mr-3 h-3rem" icon="pi pi-arrow-circle-left" (click)="backButton()"></p-button>
+    <p-button type="submit" [disabled]="signUpForm.invalid" class="p-button flex align-content-center w-12rem h-3rem">Înregistrează-te</p-button>
+  </div>
+</form>
+  </div>
+</div>

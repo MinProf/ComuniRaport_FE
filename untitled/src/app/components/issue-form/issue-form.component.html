@@ -1,0 +1,39 @@
+<div class="dialog-component flex align-items-center justify-content-center" >
+<form [formGroup]="issueForm">
+  <div class="w-70 align-content-center custom-container">
+  <div class="card1 mt-3">
+    <p >Tip de problemă</p>
+   <p-dropdown id="issueCategory" [options]="issueCategoryOptions" formControlName="issueCategory" class="custom-input"></p-dropdown>
+  </div>
+
+  <div class="card1">
+    <p>Status</p>
+    <p-dropdown id="status" [options]="statusOptions" formControlName="status" class="hide-arrow custom-input"></p-dropdown>
+  </div>
+
+  <div class="card1">
+    <p>Data</p>
+    <p-calendar id="date" formControlName="date" class="custom-input"></p-calendar>
+  </div>
+
+  <div class="card1">
+    <label for="description">Descriere</label>
+    <textarea id="description" pInputTextarea formControlName="description" class="custom-input mb-2"></textarea>
+  </div>
+
+  <div class="card1">
+    <label for="latitude">Latitudine</label>
+    <input type="text" id="latitude" pInputText formControlName="latitude" class="custom-input mb-2" >
+  </div>
+
+  <div class="card1">
+    <label for="longitude">Longitudine</label>
+    <input type="text" id="longitude" pInputText formControlName="longitude" class="custom-input">
+  </div>
+  </div>
+    <div class="mt-4 flex justify-content-center align-content-center">
+  <button pButton type="button" (click)="saveIssue()">Raportează</button>
+    </div>
+</form>
+  </div>
+

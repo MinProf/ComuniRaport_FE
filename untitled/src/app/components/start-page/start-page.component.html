@@ -1,0 +1,39 @@
+
+<div class="flex align-items-center ml-8 pl-8">
+<h3 class="text-xl mt-3 ml-7">Bine ai revenit, {{userMock.lastName}}!</h3>
+</div>
+<div class="surface-ground w-8 align-items-center justify-content-center xl:mt-5">
+  <div class="grid align-items-center justify-content-center">
+    <div class="col-12 md:col-6 xl:6 p-4">
+      <div class="surface-card shadow-2 border-round p-4">
+        <div class="flex flex-column align-items-center border-bottom-1 surface-border pb-3">
+          <img src="assets/traveling-map-with-golden-pins_144627-23985.avif" alt="harta" class="mb-3">
+          <span class="text-xl text-900 mb-2">Despre hartă</span>
+          <span class="text-600 mb-3 ml-2"> Oferă utilizatorilor posibilitatea de a înregistra rapid și ușor problemele din comunitatea lor. Utilizatorii pot selecta locația exactă a problemei pe hartă, permițând astfel autorităților să identifice și să gestioneze eficient problemei. </span>
+        </div>
+        <div class="flex pt-3 justify-content-between align-items-center">
+          <button pButton  label="Spre hartă" (click)="goToMap()" icon="pi pi-arrow-right" class="p-element p-ripple p-button-text p-button p-component"></button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 md:col-6 xl:6 p-4">
+      <div class="surface-card shadow-2 border-round p-4">
+        <div class="flex flex-column align-items-center border-bottom-1 surface-border pb-3">
+          <img src="assets/idea-concept-with-light-bulb_23-2149105829.avif" alt="bec" class="mb-3">
+          <span class="text-l text-900 mb-2">Instrucțiuni</span>
+          <span class="text-600 mb-3">
+            <ol>
+              <li>Intră pe hartă și dă click pe locație</li>
+              <li>Adaugă informații despre problema întâlnită</li>
+              <li>Administrația este anunțată!</li>
+            </ol>
+          </span>
+        </div>
+        <div class="flex pt-3 justify-content-between align-items-center">
+          <button pButton icon="pi pi-shopping-cart"  class="p-element p-ripple p-button-text p-button p-component hide"></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

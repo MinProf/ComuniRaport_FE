@@ -1,0 +1,20 @@
+:host::ng-deep.edit-popup,
+:host::ng-deep.p-dialog {
+  width: 35rem;
+  height: 20.5rem;
+}
+
+.card1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+:host::ng-deep.p-dropdown-items-wrapper {
+  max-width: 15rem;
+}
+:host ::ng-deep .p-dropdown{
+  width: 15.6rem;
+}
+:host::ng-deep.p-dialog .p-dialog-footer {
+  text-align: center;
+}

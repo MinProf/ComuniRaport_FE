@@ -1,0 +1,51 @@
+:root {
+  --primary-bg-color-green: #cdcfc0;
+  --secondary-bg-color: #f1ebe5;
+  --primary-text-color: #5e5c4f;
+  --border-color-grass-green: #4CAF50;
+  --text-color-white: white;
+
+}
+
+@font-face {
+  font-family: "Isidora Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url('../../assets/fonts/IsidoraSans-Thin.woff') format('woff'),
+  url('../../assets/fonts/IsidoraSans-Thin.woff') format('woff');
+}
+@font-face {
+  font-family: "Isidora Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../assets/fonts/IsidoraSans-Light.woff') format('woff'),
+  url('../../assets/fonts/IsidoraSans-Light.woff') format('woff');
+}
+@font-face {
+  font-family: "Isidora Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url('../../assets/fonts/IsidoraSans-Regular.woff') format('woff'),
+  url('../../assets/fonts/IsidoraSans-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: "Isidora Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url('../../assets/fonts/IsidoraSans-Medium.woff') format('woff'),
+  url('../../assets/fonts/IsidoraSans-Medium.woff') format('woff');
+}
+@font-face {
+  font-family: "Isidora Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url('../../assets/fonts/IsidoraSans-SemiBold.woff') format('woff'),
+  url('../../assets/fonts/IsidoraSans-SemiBold.woff') format('woff');
+}
+@font-face {
+  font-family: "Isidora Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url('../../assets/fonts/IsidoraSans-Bold.woff') format('woff'),
+  url('../../assets/fonts/IsidoraSans-Bold.woff') format('woff');
+}

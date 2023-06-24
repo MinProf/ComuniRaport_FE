@@ -1,0 +1,35 @@
+.custom-input {
+  width: 18vw;
+}
+.custom-label {
+  margin-bottom: 1rem;
+}
+
+.custom-input2 {
+  width: 37vw;
+}
+
+.password-icon {
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.passw-eye-btn {
+  text-decoration: none;
+  background: none;
+  color: inherit;
+  border: none;
+}
+
+.change-passw {
+  text-decoration: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+:host::ng-deep.p-steps .p-steps-item .p-menuitem-link {
+  position:relative;
+  bottom: 8px;
+}

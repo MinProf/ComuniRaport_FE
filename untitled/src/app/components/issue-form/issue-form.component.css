@@ -1,0 +1,31 @@
+:host ::ng-deep.hide-arrow .p-dropdown-trigger .p-dropdown-trigger-icon {
+  display: none;
+}
+.card1 {
+  width: 30rem;
+  display: flex;
+  justify-content: space-between;
+}
+.custom-container {
+  background-color: var(--secondary-bg-color) !important;
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 3px 3px 6px 0px rgba(	94, 92, 79,0.75);
+}
+::ng-deep.p-dropdown-items-wrapper {
+  max-width: 15rem;
+}
+::ng-deep.p-dialog .p-dialog-header,::ng-deep.p-dialog .p-dialog-content  {
+  background-color: var(--primary-bg-color-green) !important;
+  color: var(--primary-text-color) !important;
+  font-family: 'Isidora Sans', serif;
+  font-weight: 600;
+}
+.custom-input {
+  width: 16rem;
+  border-radius: 5px;
+}
+
+:host ::ng-deep .p-dropdown{
+  width: 15.6rem;
+}

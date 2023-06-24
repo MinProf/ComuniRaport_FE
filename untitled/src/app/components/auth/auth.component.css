@@ -1,0 +1,23 @@
+.surface-card {
+  background-color: var(--secondary-bg-color) !important;
+}
+
+:host::ng-deep.p-button.p-button-outlined {
+  border: 2px solid var(--primary-text-color);
+  border-radius: 7px;
+  color: var(--primary-text-color);
+}
+
+:host::ng-deep.p-button.p-button-outlined:hover {
+ background-color: var(--border-color-grass-green);
+  color: white;
+  border: 2.5px solid var(--border-color-grass-green);
+}
+
+a {
+  color: var(--primary-text-color) !important;
+}
+
+a:hover, a:enabled, a:focus {
+  color: var(--border-color-grass-green) !important;
+}

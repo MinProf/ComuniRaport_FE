@@ -1,0 +1,8 @@
+<p-dialog header="" [(visible)]="deleteModalPopup" [modal]="true" [closable]="true" styleClass="delete-popup-confirm" (onHide)="closePopup(true)">
+  <p class="m-0">Sunteți sigur că doriți să continuați?</p>
+  <ng-template pTemplate="footer">
+    <p-button label="Da" (click)="closePopup(true)" class="p-button-label"></p-button>
+    <p-button label="Nu" (click)="closePopup(false)"></p-button>
+  </ng-template>
+</p-dialog>
+

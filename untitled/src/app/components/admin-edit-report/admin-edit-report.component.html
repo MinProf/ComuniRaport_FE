@@ -1,0 +1,13 @@
+<p-dialog [(visible)]="displayEditPopup" (onHide)="onCloseEditPopup(true)" [closable]="true"
+          styleClass="edit-popup" [modal]="true">
+  <div class="card1">
+    <p>Status problemă</p>
+    <p-dropdown [options]="statusOptions"  [(ngModel)]="raportStatus" (ngModelChange)="onStatusChange(raportStatus)"></p-dropdown>
+  </div>
+  <ng-template pTemplate="footer">
+    <div>
+      <button pButton label="Salvează" class="p-button-label btns" (click)="emitClickEvent()"></button>
+      <button pButton label="Anulează"  (click)="onCloseEditPopup(true)" class="p-button-rounded btns"></button>
+    </div>
+  </ng-template>
+</p-dialog>

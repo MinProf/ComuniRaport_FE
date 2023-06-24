@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/primeng.css";
+@import "primeflex/primeflex.css";
+@import 'primeicons/primeicons.css';
+@import 'assets/theme/theme.css';
+@import "primeng/resources/themes/saga-green/theme.css";
+
+:root {
+  background-color:var(--primary-bg-color-green) !important;
+  font-family: 'Isidora Sans', serif;
+  font-weight: bold;
+  color: var(--primary-text-color);
+
+}

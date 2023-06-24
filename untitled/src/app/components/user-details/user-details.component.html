@@ -1,0 +1,83 @@
+<div class="desktop-container flex card align-items-center justify-content-center">
+  <div class="surface-card p-4 shadow-2 border-round w-full h-full lg:w-5 mt-8">
+    <h3 *ngIf="activeIndex == 0" class="flex justify-content-center align-items-center mb-3">Detalii utilizator</h3>
+    <h3 class="flex justify-content-center align-items-center mb-3" *ngIf="activeIndex == 1">Schimbă parola</h3>
+    <p-steps [model]="steps" [readonly]="false" [activeIndex]="activeIndex" (activeIndexChange)="onActiveIndexChange($event)"></p-steps>
+    <div *ngIf="activeIndex == 0" class="flex align-content-center justify-content-evenly">
+      <div>
+        <span class="p-float-label">
+          <input pInputText id="lastName" type="email" [(ngModel)]="userMock.lastName" class="custom-input" />
+          <label [htmlFor]="userMock.firstName">Nume</label>
+        </span>
+      </div>
+      <div>
+        <span class="p-float-label">
+          <input pInputText id="firstName" type="text" [(ngModel)]="userMock.firstName" class="custom-input" />
+          <label [htmlFor]="userMock.firstName">Prenume</label>
+        </span>
+    </div>
+  </div>
+    <div *ngIf="activeIndex == 0" class="flex align-content-center justify-content-evenly mt-4">
+    <div>
+        <span class="p-float-label mt-1">
+          <input pInputText id="email" type="email" [(ngModel)]="userMock.email" class="custom-input2" />
+          <label [htmlFor]="userMock.email">Email</label>
+        </span>
+    </div>
+    </div>
+    <div *ngIf="activeIndex == 0" class="flex align-content-center justify-content-evenly mt-4">
+      <div>
+        <span class="p-float-label mt-1">
+          <input pInputText id="phoneNumber" type="text" [(ngModel)]="userMock.phone" class="custom-input2" [maxlength]="10" />
+          <label [htmlFor]="userMock.phone">Telefon</label>
+        </span>
+      </div>
+    </div>
+    <div *ngIf="activeIndex == 0" class="flex align-content-center justify-content-evenly mt-4">
+      <div>
+        <span class="p-float-label mt-1">
+          <input pInputText id="county" type="text" [(ngModel)]="userMock.county" class="custom-input" />
+          <label [htmlFor]="userMock.county">Județ</label>
+        </span>
+      </div>
+      <div>
+        <span class="p-float-label mt-1">
+          <input pInputText id="city" type="text" [(ngModel)]="userMock.city" class="custom-input" />
+          <label [htmlFor]="userMock.city">Oraș</label>
+        </span>
+      </div>
+    </div>
+    <div *ngIf="activeIndex == 0" class="flex align-content-center justify-content-evenly text-center mt-4">
+      <p-button type="submit" class="p-button mt-2 ml-1 w-12rem h-3rem" (click)="onSubmitUserDetails(userMock)">Modifică detalii</p-button>
+      <a (click)="changePasswordButton()" class="mt-4 w-12rem h-3rem align-content-center change-passw">Schimbă parola</a>
+    </div>
+    <div *ngIf="activeIndex == 1" class="my-3">
+      <div class="flex align-content-center justify-content-center mb-2">
+        <div class="flex align-content-center justify-content-evenly w-8">
+        <span class="p-float-label">
+          <input pInputText id="currentPassword" type="password" [type]="showPassword ? 'text' : 'password'" [(ngModel)]="userMock.currentPassword" class="custom-input" />
+          <button class="password-icon passw-eye-btn" (click)="togglePasswordVisibility()"><i class="pi" [ngClass]="{'pi-eye': showPassword, 'pi-eye-slash': !showPassword}"></i></button>
+          <label [htmlFor]="userMock.currentPassword" class="-ml-1">Parolă curentă</label>
+        </span>
+        </div>
+        <div>
+        <span class="p-float-label custom-label">
+          <input pInputText id="newPassw" type="password" [type]="showPassword ? 'text' : 'password'" [(ngModel)]="userMock.newPassword" class="custom-input mb-3" />
+          <label [htmlFor]="userMock.newPassword" class="-ml-1">Parolă nouă</label>
+        </span>
+          <span class="p-float-label mt-3">
+          <input pInputText id="confirmPassw" type="password" [type]="showPassword ? 'text' : 'password'" [(ngModel)]="userMock.confirmPassword" class="custom-input" />
+          <label [htmlFor]="userMock.confirmPassword" class="-ml-1">Confirmă parola nouă</label>
+        </span>
+        </div>
+        <div>
+        </div>
+      </div>
+      <div class="flex align-content-center justify-content-center">
+        <p-button class="p-button-icon mt-3 ml-1 flex align-content-center" icon="pi pi-arrow-circle-left" (click)="backButton()"></p-button>
+        <p-button type="submit" class="p-button mt-3 ml-1 w-12rem h-3rem">Modifică parola</p-button>
+      </div>
+    </div>
+    </div>
+</div>
+

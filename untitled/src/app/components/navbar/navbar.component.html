@@ -1,0 +1,14 @@
+<div class="desktop-container mb-4">
+  <div class="flex justify-content-between align-items-center align-content-center py-3 md:py-3">
+    <div class="w-5 flex justify-content-start align-items-center">
+      <img src="assets/licenta-logo-without-writing.png" alt="logo" class="mr-3">
+      <a routerLink="map" routerLinkActive="active" class="mr-4 ml-3"><i class="pi pi-map mr-1 align-items-center"></i>Hartă</a>
+      <a routerLink="user-details" routerLinkActive="active" class="mr-4 ml-3"><i class="pi pi-user-edit mr-1 align-items-center"></i>Detalii utilizator</a>
+    </div>
+    <div class="w-3 flex justify-content-end align-items-center">
+      <p-dropdown [options]="notifications" dropdownIcon="pi pi-bell" [disabled]="true"></p-dropdown>
+      <a routerLinkActive="active" routerLink="admin-welcome" class="mr-2">Panou</a>
+      <button pButton class="mr-2 nav-btn" (click)="logOut()" ><i class="pi pi-sign-out mr-1"></i>Deconectare </button>
+    </div>
+  </div>
+</div>
