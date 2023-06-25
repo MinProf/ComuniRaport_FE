@@ -6,7 +6,7 @@ import {mapStyle} from "../../assets/mapStyle";
 export class MapService {
   getNewLoader() {
     return new Loader({
-      apiKey: 'AIzaSyCsf2TTAsXqRRdnobefjbReHljFhRgODLc'
+      apiKey: 'insert your google api here'
     });
   }
   initializeMapOptions(map: any) {
